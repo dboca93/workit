@@ -1,1 +1,5 @@
-/* /index.html
+# Allow requests to specific assets without rewriting
+/assets/* /:splat 200
+
+# Redirect all other requests to index.html
+/* /index.html 200
