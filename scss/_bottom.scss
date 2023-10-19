@@ -1,0 +1,75 @@
+.bottom__section {
+  min-height: 35rem;
+  @include align-middle;
+}
+
+.bottom__text__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2.1875rem;
+  padding: 0.9375rem 1.875rem 0.9375rem 1.6875rem;
+  background-color: $navy;
+  color: white;
+  width: 33.75rem;
+  position: relative;
+
+  h3 {
+    text-align: left;
+    white-space: nowrap;
+    width: 90%;
+    font-family: $fraunces;
+    font-size: 2.375rem; /* make smaller on smaller screens*/
+  }
+
+  p {
+    text-align: justify;
+    max-width: 90%;
+    font-family: $manrope;
+    font-size: 1rem;
+  }
+
+  a {
+    width: 10.9375rem;
+    height: 3rem;
+    border: none;
+    background-color: $aqua__green;
+    color: $navy;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: $manrope;
+    @include align-middle; 
+
+    // align-self: flex-start;
+
+    &:hover {
+      background-color: $navy;
+      border: 0.125rem solid $aqua__green;
+      color: $aqua__green; 
+      cursor: pointer;
+    }
+  }
+}
+
+.bottom__display__picture {
+  min-width: 15.625rem;
+  height: 15.625rem;
+  border-radius: 50%;
+  z-index: -1;
+  position: relative;
+  bottom: 6.25rem;
+  left: 3.125rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.background__circle__bottom {
+  position: absolute;
+  z-index: 1;
+  bottom: -5rem;
+  left: 20.625rem;
+  scale: 0.7;
+}

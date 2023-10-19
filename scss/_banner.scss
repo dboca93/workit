@@ -1,0 +1,63 @@
+.banner__absolute {
+    width: 80%; 
+    position: absolute;  
+    left: 10%; 
+    right: 10%; 
+    top: 3.25rem;  
+    height: auto;
+    min-height: 37.5rem;
+    z-index: 5; 
+    @include align-middle; 
+    flex-direction: column; 
+
+    h2 {
+        text-align: center;
+        margin-top: 1.25rem; 
+        color: white;
+        font-weight: 600;
+        font-size: clamp(2.25rem, 8vw, 4.125rem);
+        min-width: 14.375rem; 
+        line-height: 1.1;
+        font-family: $fraunces;
+        overflow: hidden;
+        white-space: nowrap; 
+        span {
+            text-decoration: underline;
+            text-decoration-color: $aqua__green;
+            text-decoration-thickness: 0.125rem;
+        }
+    }
+    a {
+        border: none; 
+        margin-top: 2.5rem; 
+        margin-bottom: auto; 
+        width: 8.75rem; 
+        height: 2.5rem;
+        background-color: $aqua__green;
+        font-family: $manrope; 
+        font-weight: 600;
+        font-size: 16px;
+        // text-align: center;
+        @include align-middle; 
+
+        &:hover {
+            background-color: $navy;
+            color: $aqua__green;
+            cursor: pointer;
+            border: 0.125rem solid $aqua__green;
+        }
+    }
+
+    .image__container {
+        margin-top: 0rem; 
+        width: clamp(32.5rem, 33vw, 35.625rem); 
+        height: auto;
+        margin-left: 4.5vw;
+        transform: rotate(4deg);
+      
+        img {
+            width: 100%;
+            height: auto;
+        }
+      }
+  }

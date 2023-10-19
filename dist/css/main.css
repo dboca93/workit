@@ -1,0 +1,587 @@
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.8.5 (last updated 14.6.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+@font-face {
+  font-family: "Fraunces 144pt S000";
+  src: url("/assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/assets/fonts/manrope/static/Manrope-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.hero__section {
+  height: 34.375rem;
+  width: 100vw;
+  background-color: #24053E;
+  -webkit-clip-path: ellipse(100% 55% at 48% 44%);
+          clip-path: ellipse(100% 55% at 48% 44%);
+}
+.hero__section .background__circ__left {
+  position: absolute;
+  left: -8.125rem;
+  top: 1.5625rem;
+  scale: 0.7;
+}
+.hero__section .background__circ__right {
+  position: absolute;
+  right: -2.8125rem;
+  top: 14.0625rem;
+  transform: rotate(5deg);
+}
+
+header {
+  font-family: "Manrope", sans-serif;
+  padding-top: 0.5rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav {
+  color: white;
+  min-width: 13.75rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav h1 {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+header nav h1 .not__bold {
+  font-weight: normal;
+}
+header nav a {
+  font-size: 0.9375rem;
+  padding-bottom: 0.0625rem;
+  border-bottom: 0.0938rem solid #44FFA1;
+}
+header nav a:hover {
+  color: #44FFA1;
+}
+
+.banner__absolute {
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 3.25rem;
+  height: auto;
+  min-height: 37.5rem;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.banner__absolute h2 {
+  text-align: center;
+  margin-top: 1.25rem;
+  color: white;
+  font-weight: 600;
+  font-size: clamp(2.25rem, 8vw, 4.125rem);
+  min-width: 14.375rem;
+  line-height: 1.1;
+  font-family: "Fraunces 144pt S000", sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.banner__absolute h2 span {
+  text-decoration: underline;
+  text-decoration-color: #44FFA1;
+  text-decoration-thickness: 0.125rem;
+}
+.banner__absolute a {
+  border: none;
+  margin-top: 2.5rem;
+  margin-bottom: auto;
+  width: 8.75rem;
+  height: 2.5rem;
+  background-color: #44FFA1;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner__absolute a:hover {
+  background-color: #24053E;
+  color: #44FFA1;
+  cursor: pointer;
+  border: 0.125rem solid #44FFA1;
+}
+.banner__absolute .image__container {
+  margin-top: 0rem;
+  width: clamp(32.5rem, 33vw, 35.625rem);
+  height: auto;
+  margin-left: 4.5vw;
+  transform: rotate(4deg);
+}
+.banner__absolute .image__container img {
+  width: 100%;
+  height: auto;
+}
+
+.middle__section {
+  background-color: #FCF8FF;
+  width: 100vw;
+  height: 39.0625rem;
+  -webkit-clip-path: ellipse(100% 55% at 48% 44%);
+          clip-path: ellipse(100% 55% at 48% 44%);
+  position: relative;
+  z-index: -1;
+  color: #24053E;
+  margin-top: -3.75rem;
+  padding-top: 23vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.circ {
+  width: 1.875rem;
+  height: 1.875rem;
+  outline: 0.0625rem solid #24053E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Fraunces 144pt S000", sans-serif;
+}
+
+.head {
+  font-family: "Fraunces 144pt S000", sans-serif;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 300;
+}
+
+.flex__container {
+  width: 85vw;
+  height: auto;
+  display: flex;
+  min-width: 16.25rem;
+  row-gap: 0.9375rem;
+  -moz-column-gap: 2.1875rem;
+       column-gap: 2.1875rem;
+  padding-bottom: 0.9375rem;
+}
+
+.grid__item__one, .grid__item__two, .grid__item__three {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.25rem 3.125rem 14.375rem;
+  row-gap: 1.875rem;
+}
+
+.three__num__container, .two__num__container,
+.one__num__container {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.three__para__container, .two__para__container,
+.one__para__container, .three__header__container,
+.two__header__container, .one__header__container {
+  text-align: center;
+}
+
+.para {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: #24053E;
+}
+
+.three__header__container, .two__header__container,
+.one__header__container {
+  font-size: 1.375rem;
+}
+
+.bottom__section {
+  min-height: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom__text__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2.1875rem;
+  padding: 0.9375rem 1.875rem 0.9375rem 1.6875rem;
+  background-color: #24053E;
+  color: white;
+  width: 33.75rem;
+  position: relative;
+}
+.bottom__text__container h3 {
+  text-align: left;
+  white-space: nowrap;
+  width: 90%;
+  font-family: "Fraunces 144pt S000", sans-serif;
+  font-size: 2.375rem; /* make smaller on smaller screens*/
+}
+.bottom__text__container p {
+  text-align: justify;
+  max-width: 90%;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+}
+.bottom__text__container a {
+  width: 10.9375rem;
+  height: 3rem;
+  border: none;
+  background-color: #44FFA1;
+  color: #24053E;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom__text__container a:hover {
+  background-color: #24053E;
+  border: 0.125rem solid #44FFA1;
+  color: #44FFA1;
+  cursor: pointer;
+}
+
+.bottom__display__picture {
+  min-width: 15.625rem;
+  height: 15.625rem;
+  border-radius: 50%;
+  z-index: -1;
+  position: relative;
+  bottom: 6.25rem;
+  left: 3.125rem;
+}
+.bottom__display__picture img {
+  width: 100%;
+  height: 100%;
+}
+
+.background__circle__bottom {
+  position: absolute;
+  z-index: 1;
+  bottom: -5rem;
+  left: 20.625rem;
+  scale: 0.7;
+}
+
+footer {
+  width: 100vw;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+footer h4 {
+  font-family: "Manrope", sans-serif;
+  color: #24053E;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+footer h4 span {
+  font-weight: normal;
+}
+footer .socials__container {
+  width: 7.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .socials__container a img:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+@media only screen and (max-width: 55em) {
+  header nav a {
+    font-size: 0.875rem;
+  }
+  .bottom__display__picture {
+    bottom: 9.375rem;
+    left: 0rem;
+  }
+  .bottom__text__container {
+    width: 25rem;
+    margin-left: -5.625rem;
+    margin-right: 0.9375rem;
+  }
+  .bottom__text__container h3 {
+    font-size: 1.75rem;
+  }
+  .bottom__text__container p {
+    font-size: 0.875rem;
+  }
+  .circ {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .middle__section {
+    padding-top: 6.25rem;
+    height: auto;
+    padding-bottom: 4.6875rem;
+  }
+  .flex__container {
+    flex-direction: column;
+    row-gap: 0.4688rem;
+    margin-right: 2%;
+  }
+  .grid__item__three,
+  .grid__item__two,
+  .grid__item__one {
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto auto auto;
+    row-gap: 0.3125rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    -moz-column-gap: 0.625rem;
+         column-gap: 0.625rem;
+  }
+  .three__num__container,
+  .two__num__container,
+  .one__num__container {
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+  .three__header__container,
+  .two__header__container,
+  .one__header__container {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .three__para__container,
+  .two__para__container,
+  .one__para__container {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+  .head,
+  .para {
+    text-align: left;
+  }
+  .background__circle__bottom {
+    left: 13.75rem;
+    scale: 0.7;
+  }
+  .hero__section {
+    height: 30rem;
+  }
+  .banner__absolute {
+    min-height: 29.375rem;
+  }
+  .banner__absolute h2 {
+    margin-top: 0.625rem;
+  }
+  .banner__absolute button {
+    margin-top: auto;
+  }
+  .banner__absolute .image__container {
+    width: clamp(23.75rem, 33vw, 30.625rem);
+  }
+}
+@media only screen and (max-width: 27.5em) {
+  header nav a {
+    font-size: 0.75rem;
+  }
+  .background__circle__bottom {
+    display: none;
+  }
+  .head, .para {
+    text-align: center;
+  }
+  .background__circ__left,
+  .background__circ__right {
+    display: none;
+  }
+  .bottom__section {
+    position: relative;
+  }
+  .bottom__display__picture {
+    position: absolute;
+    z-index: -1;
+    bottom: 18.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bottom__text__container {
+    max-width: 17.5rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-top: 1.875rem;
+    position: absolute;
+    bottom: 0.625rem;
+    align-items: center;
+    row-gap: 1.0938rem;
+  }
+  .bottom__text__container h3 {
+    width: auto;
+    text-align: center;
+  }
+  .bottom__text__container p {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+    max-width: 85%;
+  }
+  .middle__section {
+    height: auto;
+    padding-bottom: 4.375rem;
+  }
+  .flex__container {
+    row-gap: 2.0313rem;
+  }
+  .grid__item__three,
+  .grid__item__two,
+  .grid__item__one {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7813rem 2.8125rem auto;
+    row-gap: 0.9375rem;
+    padding-top: 0rem;
+    padding-bottom: 0.625rem;
+  }
+  .three__num__container,
+  .two__num__container,
+  .one__num__container {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .three__header__container,
+  .two__header__container,
+  .one__header__container {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-bottom: 6.25rem;
+  }
+  .three__para__container,
+  .two__para__container,
+  .one__para__container {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  .background__circle__bottom {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,61 @@
+.hero__section {
+    height: 34.375rem; 
+    width: 100vw; 
+    background-color: $navy; 
+    clip-path: ellipse(100% 55% at 48% 44%);
+
+    .background__circ__left {
+        position: absolute;
+        left: -8.125rem;
+        top: 1.5625rem; 
+        scale: 0.7;
+      }
+
+    .background__circ__right {
+        position: absolute;
+        right: -2.8125rem;
+        top: 14.0625rem;
+        transform: rotate(5deg);
+  }
+  }
+
+  header {
+    font-family: $manrope; 
+    padding-top: 0.5rem;
+    width: 100vw; 
+    @include align-middle; 
+
+    nav {
+        color: white;
+        min-width: 13.75rem;
+        width: 80%;
+        display: flex; 
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+            font-weight: 600; 
+            font-size: 1.125rem;
+        }
+    }
+
+    nav h1 .not__bold {
+        font-weight: normal;
+    }
+
+    nav a {
+        font-size: 0.9375rem;
+        padding-bottom: 0.0625rem;
+        border-bottom: 0.0938rem solid $aqua__green;
+        &:hover {
+            color: $aqua__green;
+        }
+    }
+
+  }
+  
+
+
+
+
+  

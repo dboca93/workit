@@ -1,0 +1,81 @@
+.middle__section {
+    background-color: #FCF8FF;
+    width: 100vw; 
+    height: 39.0625rem;
+    clip-path: ellipse(100% 55% at 48% 44%);
+    position: relative; 
+    z-index: -1; 
+    color: $navy;
+    margin-top: -3.75rem; 
+    padding-top: 23vh;
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: center; 
+  }
+  
+  .circ {
+    width: 1.875rem; 
+    height: 1.875rem; 
+    outline: 0.0625rem solid $navy; 
+    display: flex; align-items: center; justify-content: center; 
+    border-radius: 50%; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $fraunces;
+  }
+
+  .head {
+    font-family: $fraunces;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 300;
+  }
+  
+  .flex__container {
+    width: 85vw; 
+    height: auto; 
+    display: flex;
+    min-width: 16.25rem; 
+    row-gap: 0.9375rem; 
+    column-gap: 2.1875rem;
+    padding-bottom: 0.9375rem; 
+  }
+
+
+  
+  .grid__item__one, .grid__item__two, .grid__item__three {
+    flex: 1; 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1.25rem 3.125rem 14.375rem; 
+    row-gap: 1.875rem;
+  }
+  
+  .three__num__container, .two__num__container, 
+  .one__num__container {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 2; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+    .three__para__container, .two__para__container,
+    .one__para__container, .three__header__container,
+  .two__header__container, .one__header__container {
+        text-align: center;  
+    } 
+
+    .para {
+    font-family: $manrope; 
+    font-size: 1.125rem; 
+    line-height: 2rem;
+    color: $navy;
+    }
+  
+  .three__header__container, .two__header__container, 
+  .one__header__container {
+
+    font-size: 1.375rem; 
+  }
