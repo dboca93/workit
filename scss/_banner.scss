@@ -36,8 +36,7 @@
         background-color: $aqua__green;
         font-family: $manrope; 
         font-weight: 600;
-        font-size: 16px;
-        // text-align: center;
+        font-size: 1rem;
         @include align-middle; 
 
         &:hover {
@@ -50,7 +49,7 @@
 
     .image__container {
         margin-top: 0rem; 
-        width: clamp(32.5rem, 33vw, 35.625rem); 
+        width: clamp(31.5rem, 32vw, 33rem); 
         height: auto;
         margin-left: 4.5vw;
         transform: rotate(4deg);

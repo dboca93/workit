@@ -1,13 +1,13 @@
 .middle__section {
     background-color: #FCF8FF;
     width: 100vw; 
-    height: 39.0625rem;
+    height: 44rem;
     clip-path: ellipse(100% 55% at 48% 44%);
     position: relative; 
     z-index: -1; 
     color: $navy;
     margin-top: -3.75rem; 
-    padding-top: 23vh;
+    padding-top: 19.5vh;
     display: flex; 
     align-items: flex-start; 
     justify-content: center; 
@@ -23,13 +23,14 @@
     margin-left: auto;
     margin-right: auto;
     font-family: $fraunces;
+    font-weight: 600;
   }
 
   .head {
     font-family: $fraunces;
     font-size: 3.5rem;
     line-height: 4rem;
-    font-weight: 300;
+    font-weight: 600;
   }
   
   .flex__container {
@@ -38,7 +39,7 @@
     display: flex;
     min-width: 16.25rem; 
     row-gap: 0.9375rem; 
-    column-gap: 2.1875rem;
+    column-gap: 3.1rem;
     padding-bottom: 0.9375rem; 
   }
 
@@ -69,13 +70,13 @@
 
     .para {
     font-family: $manrope; 
-    font-size: 1.125rem; 
-    line-height: 2rem;
+    font-size: 1.375rem; 
+    line-height: 2;
     color: $navy;
     }
   
   .three__header__container, .two__header__container, 
   .one__header__container {
 
-    font-size: 1.375rem; 
+    font-size: 1.75rem; 
   }

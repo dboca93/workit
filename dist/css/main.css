@@ -105,13 +105,13 @@ meter {
 
 @font-face {
   font-family: "Fraunces 144pt S000";
-  src: url("../assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf");
+  src: url("./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf") format("ttf"), url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("ttf");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("../assets/fonts/manrope/static/Manrope-Regular.ttf");
+  src: url("./assets/fonts/manrope/static/Manrope-Regular.ttf") format("ttf"), url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf") format("ttf");
   font-style: normal;
   font-weight: normal;
 }
@@ -121,6 +121,7 @@ meter {
   background-color: #24053E;
   -webkit-clip-path: ellipse(100% 55% at 48% 44%);
           clip-path: ellipse(100% 55% at 48% 44%);
+  overflow: hidden;
 }
 .hero__section .background__circ__left {
   position: absolute;
@@ -133,6 +134,8 @@ meter {
   right: -2.8125rem;
   top: 14.0625rem;
   transform: rotate(5deg);
+  overflow: hidden;
+  display: none;
 }
 
 header {
@@ -153,13 +156,15 @@ header nav {
 }
 header nav h1 {
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
 }
 header nav h1 .not__bold {
+  font-size: 1.4688rem;
   font-weight: normal;
 }
 header nav a {
-  font-size: 0.9375rem;
+  margin-top: 0.3125rem;
+  font-size: 1.125rem;
   padding-bottom: 0.0625rem;
   border-bottom: 0.0938rem solid #44FFA1;
 }
@@ -207,7 +212,7 @@ header nav a:hover {
   background-color: #44FFA1;
   font-family: "Manrope", sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,7 +225,7 @@ header nav a:hover {
 }
 .banner__absolute .image__container {
   margin-top: 0rem;
-  width: clamp(32.5rem, 33vw, 35.625rem);
+  width: clamp(31.5rem, 32vw, 33rem);
   height: auto;
   margin-left: 4.5vw;
   transform: rotate(4deg);
@@ -233,14 +238,14 @@ header nav a:hover {
 .middle__section {
   background-color: #FCF8FF;
   width: 100vw;
-  height: 39.0625rem;
+  height: 44rem;
   -webkit-clip-path: ellipse(100% 55% at 48% 44%);
           clip-path: ellipse(100% 55% at 48% 44%);
   position: relative;
   z-index: -1;
   color: #24053E;
   margin-top: -3.75rem;
-  padding-top: 23vh;
+  padding-top: 19.5vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -258,13 +263,14 @@ header nav a:hover {
   margin-left: auto;
   margin-right: auto;
   font-family: "Fraunces 144pt S000", sans-serif;
+  font-weight: 600;
 }
 
 .head {
   font-family: "Fraunces 144pt S000", sans-serif;
   font-size: 3.5rem;
   line-height: 4rem;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .flex__container {
@@ -273,8 +279,8 @@ header nav a:hover {
   display: flex;
   min-width: 16.25rem;
   row-gap: 0.9375rem;
-  -moz-column-gap: 2.1875rem;
-       column-gap: 2.1875rem;
+  -moz-column-gap: 3.1rem;
+       column-gap: 3.1rem;
   padding-bottom: 0.9375rem;
 }
 
@@ -303,14 +309,14 @@ header nav a:hover {
 
 .para {
   font-family: "Manrope", sans-serif;
-  font-size: 1.125rem;
-  line-height: 2rem;
+  font-size: 1.375rem;
+  line-height: 2;
   color: #24053E;
 }
 
 .three__header__container, .two__header__container,
 .one__header__container {
-  font-size: 1.375rem;
+  font-size: 1.75rem;
 }
 
 .bottom__section {
@@ -336,7 +342,7 @@ header nav a:hover {
   white-space: nowrap;
   width: 90%;
   font-family: "Fraunces 144pt S000", sans-serif;
-  font-size: 2.375rem; /* make smaller on smaller screens*/
+  font-size: 2.375rem;
 }
 .bottom__text__container p {
   text-align: justify;
@@ -416,7 +422,7 @@ footer .socials__container a img:hover {
 
 @media only screen and (max-width: 55em) {
   header nav a {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .bottom__display__picture {
     bottom: 9.375rem;
@@ -502,7 +508,7 @@ footer .socials__container a img:hover {
 }
 @media only screen and (max-width: 27.5em) {
   header nav a {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .background__circle__bottom {
     display: none;

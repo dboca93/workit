@@ -3,6 +3,7 @@
     width: 100vw; 
     background-color: $navy; 
     clip-path: ellipse(100% 55% at 48% 44%);
+    overflow: hidden;
 
     .background__circ__left {
         position: absolute;
@@ -16,6 +17,8 @@
         right: -2.8125rem;
         top: 14.0625rem;
         transform: rotate(5deg);
+        overflow: hidden;
+        display: none;
   }
   }
 
@@ -35,16 +38,18 @@
 
         h1 {
             font-weight: 600; 
-            font-size: 1.125rem;
+            font-size: 1.5rem;
         }
     }
 
     nav h1 .not__bold {
+        font-size: 1.4688rem;
         font-weight: normal;
     }
 
     nav a {
-        font-size: 0.9375rem;
+        margin-top: 0.3125rem;
+        font-size: 1.125rem;
         padding-bottom: 0.0625rem;
         border-bottom: 0.0938rem solid $aqua__green;
         &:hover {
