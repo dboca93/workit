@@ -1,7 +1,7 @@
 .middle__section {
     background-color: #FCF8FF;
     width: 100vw; 
-    height: 44rem;
+    height: 48.5rem;
     clip-path: ellipse(100% 55% at 48% 44%);
     position: relative; 
     z-index: -1; 
@@ -77,6 +77,6 @@
   
   .three__header__container, .two__header__container, 
   .one__header__container {
-
+    white-space: nowrap;
     font-size: 1.75rem; 
   }

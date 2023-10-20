@@ -103,6 +103,10 @@ meter {
   all: revert;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: "Fraunces 144pt S000";
   src: url("./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf") format("ttf"), url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("ttf");
@@ -135,7 +139,6 @@ meter {
   top: 14.0625rem;
   transform: rotate(5deg);
   overflow: hidden;
-  display: none;
 }
 
 header {
@@ -238,7 +241,7 @@ header nav a:hover {
 .middle__section {
   background-color: #FCF8FF;
   width: 100vw;
-  height: 44rem;
+  height: 48.5rem;
   -webkit-clip-path: ellipse(100% 55% at 48% 44%);
           clip-path: ellipse(100% 55% at 48% 44%);
   position: relative;
@@ -316,6 +319,7 @@ header nav a:hover {
 
 .three__header__container, .two__header__container,
 .one__header__container {
+  white-space: nowrap;
   font-size: 1.75rem;
 }
 
