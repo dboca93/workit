@@ -7,7 +7,7 @@ CHAT GPT recommended using the section element for “hero__section”, “banne
 
 If there are any mistakes I made in accessibility, please let me know. 
 
-For the “middle section” I had to position: relative; and z-index: -1 while also playing with margin-top / padding-top in order to get into to smoothly sit underneath the purple section above with the curved bottom. If anyone has any ideas on how to do this more efficiently, I would love to find out. 
+For the “middle section” I had to position: relative; and z-index: -1 while also playing with margin-top / padding-top in order to get into to smoothly sit below the purple section above with the curved bottom. If anyone has any ideas on how to do this more efficiently, I would love to find out. 
 
 I had difficulty using the fonts with the @font-face method; I tried this in
 multiple iterations, but still couldn't get it right. If someone could provide some help
