@@ -1,18 +1,19 @@
 .middle__section {
     background-color: #FCF8FF;
     width: 100vw; 
-    height: 48.5rem;
+    height: auto;
     clip-path: ellipse(100% 55% at 48% 44%);
     position: relative; 
     z-index: -1; 
     color: $navy;
     margin-top: -3.75rem; 
-    padding-top: 19.5vh;
+    padding-top: 10.625rem;
     display: flex; 
     align-items: flex-start; 
     justify-content: center; 
+    padding-bottom: calc(1.875rem + 3vw);
   }
-  
+
   .circ {
     width: 1.875rem; 
     height: 1.875rem; 
@@ -34,13 +35,12 @@
   }
   
   .flex__container {
-    width: 85vw; 
+    width: 80%; 
     height: auto; 
     display: flex;
     min-width: 16.25rem; 
     row-gap: 0.9375rem; 
     column-gap: 3.1rem;
-    padding-bottom: 0.9375rem; 
   }
 
 
@@ -50,7 +50,7 @@
     display: grid; 
     grid-template-columns: 1fr; 
     grid-template-rows: 1.25rem 3.125rem 14.375rem; 
-    row-gap: 1.875rem;
+    row-gap: 1.75rem;
   }
   
   .three__num__container, .two__num__container, 
@@ -59,20 +59,25 @@
     grid-row: 1 / 2; 
     display: flex; 
     align-items: center; 
+    // align-items: end;
     justify-content: center; 
   }
   
     .three__para__container, .two__para__container,
     .one__para__container, .three__header__container,
   .two__header__container, .one__header__container {
-        text-align: center;  
+        text-align: center;
+        // align-self: center;  
     } 
 
     .para {
     font-family: $manrope; 
-    font-size: 1.375rem; 
-    line-height: 2;
+    font-size: 1.3rem; 
+    line-height: 1.9;
+    max-width: 28.125rem;
+    margin: 0 auto;
     color: $navy;
+
     }
   
   .three__header__container, .two__header__container, 

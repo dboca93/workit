@@ -9,6 +9,11 @@ If there are any mistakes I made in accessibility, please let me know.
 
 For the “middle section” I had to position: relative; and z-index: -1 while also playing with margin-top / padding-top in order to get into to smoothly sit underneath the purple section above with the curved bottom. If anyone has any ideas on how to do this more efficiently, I would love to find out. 
 
+I had difficulty using the fonts with the @font-face method; I tried this in
+multiple iterations, but still couldn't get it right. If someone could provide some help
+with this, it would be much appreciated. Eventually, I used the links in my header as a 
+way around this difficulty. 
+
 Otherwise, I used the preprocessor SASS, which was a great learning experience and helped me organise my code into smaller snippets. 
  
 I would love to hear any feedback, critical or otherwise. 

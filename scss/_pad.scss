@@ -1,0 +1,11 @@
+@media only screen and (max-width: 1150px) {
+    .middle__section {
+        padding-bottom: calc(75px + 8vw);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .middle__section {
+        padding-bottom: calc(135px + 8vw);
+    }
+}
